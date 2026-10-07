@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WearNou Brand Presentation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffdcbd",
+                    "on-tertiary-container": "#a57c52",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#ffdcc3",
+                    "secondary-container": "#ffc69b",
+                    "surface-variant": "#e5e2de",
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#444748",
+                    "on-secondary-fixed": "#2f1500",
+                    "on-secondary-container": "#7a502e",
+                    "inverse-primary": "#c8c6c5",
+                    "inverse-on-surface": "#f3f0ec",
+                    "surface": "#fcf9f5",
+                    "on-secondary-fixed-variant": "#643e1e",
+                    "surface-bright": "#fcf9f5",
+                    "surface-dim": "#dcdad6",
+                    "tertiary-container": "#2c1600",
+                    "secondary": "#7f5533",
+                    "outline-variant": "#c4c7c7",
+                    "tertiary-fixed-dim": "#eebd8e",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#5f5e5e",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e5e2de",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#31302e",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#858383",
+                    "primary-container": "#1c1b1b",
+                    "secondary-fixed-dim": "#f3bb91",
+                    "on-tertiary-fixed-variant": "#61401b",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-surface": "#1c1c1a",
+                    "surface-container-low": "#f6f3ef",
+                    "surface-container-high": "#eae8e4",
+                    "on-tertiary-fixed": "#2c1600",
+                    "primary": "#000000",
+                    "background": "#fcf9f5",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#474746",
+                    "primary-fixed": "#e5e2e1",
+                    "surface-container": "#f0ede9",
+                    "tertiary": "#000000",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "outline": "#747878",
+                    "on-background": "#1c1c1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-lg": "48px",
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "section-gap": "80px",
+                    "stack-sm": "12px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "stack-md": "24px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Playfair Display"],
+                    "cta": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "cta": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .glass-card { background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .ambient-shadow { box-shadow: 0px 4px 20px rgba(26, 26, 26, 0.04); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container">
+<!-- Header / Nav Shell -->
+<header class="w-full top-0 sticky z-[100] bg-surface dark:bg-surface">
+<nav class="flex justify-between items-center px-margin-desktop py-unit-8 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md tracking-tighter text-primary">WearNou</div>
+<div class="hidden md:flex gap-stack-md items-center">
+<a class="font-body-md text-body-md text-primary font-bold border-b border-primary pb-1" href="#overview">Overview</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#mood">Mood</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#identity">Identity</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#library">Components</a>
+</div>
+<div class="flex items-center gap-unit-16">
+<span class="material-symbols-outlined text-primary cursor-pointer transition-opacity hover:opacity-80">shopping_bag</span>
+<span class="material-symbols-outlined text-primary cursor-pointer transition-opacity hover:opacity-80">person</span>
+</div>
+</nav>
+</header>
+<main class="overflow-x-hidden">
+<!-- Hero Section: Brand Overview -->
+<section class="relative min-h-[90vh] flex flex-col justify-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-section-gap" id="overview">
+<div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-stack-lg">
+<div class="reveal">
+<span class="font-label-caps text-label-caps text-secondary tracking-widest block mb-unit-16">ELEVATED MINIMALISM</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-stack-sm leading-[1.1]">Where Tradition Meets The Contemporary.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-stack-md">
+                        WearNou represents a quiet revolution in luxury footwear. Handcrafted excellence defined by material integrity and editorial sophistication.
+                    </p>
+<div class="flex gap-unit-16">
+<button class="bg-primary text-on-primary font-cta text-cta px-stack-md py-4 transition-all hover:bg-secondary active:scale-95">VIEW ARCHIVE</button>
+<button class="border border-primary text-primary font-cta text-cta px-stack-md py-4 transition-all hover:bg-surface-container-low active:scale-95">OUR STORY</button>
+</div>
+</div>
+<div class="relative reveal delay-200">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden rounded-lg ambient-shadow">
+<img class="w-full h-full object-cover" data-alt="A high-fashion studio shot of luxury tan leather oxfords placed on a textured stone pedestal. The lighting is soft and cinematic, casting gentle shadows across a warm, cream-colored background. The overall aesthetic is one of quiet luxury, material excellence, and minimalist editorial design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWScqhoAFmCKzN9qjez71ikIHwzPYHOAHjAfn9injfy6IevLcpkjY7A81IugkEjHm1JewJtt4i9xbfwBG1Ss2rrCDWVkYNjTrthn3A1XlxniSC6foRdBhCGdb-WsVdfOzB48QrccJ_-hcQT4cuoAY38y0n1lMh_m4LeHztR-C2dUnM_E-409WsTeg-tidonZkLNhyJyRFwMev3EyCOS5LXsfg4DofLvtzUS2EOEtyB34gSt2RH6hd1bddP9GvRExZNpj6oPz60bqg"/>
+</div>
+<div class="absolute -bottom-8 -left-8 md:-left-16 p-stack-md glass-card rounded-lg hidden md:block max-w-[280px]">
+<p class="font-body-md text-body-md italic text-on-secondary-fixed-variant">"Quality is not an act, it is a habit. We stitch every pair as if it were our first and only."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Moodboard Section -->
+<section class="bg-surface-container-low py-section-gap" id="mood">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg gap-stack-sm">
+<div class="reveal">
+<h2 class="font-display-lg text-headline-md mb-unit-8">Sensory Moodboard</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">The textures, tones, and light that define our seasonal narrative.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-12 gap-unit-16 h-[600px] md:h-[800px]">
+<div class="col-span-2 md:col-span-7 h-full reveal">
+<div class="w-full h-full bg-surface-variant overflow-hidden rounded-lg ambient-shadow">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhlAo31HJp4lBO7uc2HiZJMl1umE9-5UbYMEv7H0XN-FmoffA9UDPWkycUZq4hczxkoazo4N38V0swO9YyvSPd-PHh7H7a1pkKrKxJZ-ByKdy-zJkjueOvDn1DkaMBVbJYPHwabJD_OBnoyUukJq6Yu4851f0vYykaF3PyuD5tmaz7d4FXsX_7T9ELKnBKIAStPv_7NftDX5yvfBAzKksDZUGNGHWuIaayQPn1H99pyE5yp650BreZ3my7O0ZWWgsgzZI8DcvQQ6s"/>
+</div>
+</div>
+<div class="col-span-1 md:col-span-5 flex flex-col gap-unit-16 h-full">
+<div class="flex-1 bg-surface-variant overflow-hidden rounded-lg ambient-shadow reveal delay-100">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANPGOzo6lVeHrfVR1q1pyPBnZM1aQ4-KsXYM9IwYGN8fPsgpKLz7z3NklSbAqB8Y0snDDCAVSoWxdmUVpR_0BQeaQmFS__VZPaMBZrO4V9kxVK0kX5pUp_ZTVD9xX51Oy9B-8sPVLKfJcTjpeqrXlevS0FHE6eu6RAjceGelbK8PNBBUHRF2_dTBTByJ-BD2q8YaCwOijMBUn7ZME-6xI0WkQVySJHXmwKt5iCf_SQYnXjQ2WJdiZCkVTP-qFRLSf-4Il9qaDsDp0"/>
+</div>
+<div class="flex-1 bg-surface-variant overflow-hidden rounded-lg ambient-shadow reveal delay-200">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANGQ36g6k5HKq-udPMy_f3rLw2EJ8vH7f7KdVJFXsvQpxOG4_9J6MzNSH83kRNeSsSVnmeLmvzDhCdZ1vEmOhzYYpERjkbu16AqWs18Q2OwYqZtUt8grAPjXfJUpvDgdz-btBitjM95evzzEm7EFDL7xjvDPH83mn9DIYhygJpoGjDrhFY1zJJmUGDcCV5c1mDU4Nu39QSRvprK0mtVPXWUGSKWnra8wHB6s9k2RMPBiIe7CN6XqIyeDOmt3cuXcB2NjvgbPDuLhM"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Identity Section: Color & Typography -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" id="identity">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<!-- Colors -->
+<div class="reveal">
+<h3 class="font-headline-sm text-headline-sm mb-stack-md border-b border-outline-variant pb-unit-16">Color Palette</h3>
+<div class="grid grid-cols-2 gap-unit-16">
+<div class="flex flex-col gap-unit-8">
+<div class="h-32 w-full bg-primary rounded-lg border border-outline-variant"></div>
+<div>
+<span class="font-label-caps text-label-caps block">PRIMARY BLACK</span>
+<span class="font-body-md text-body-md text-on-surface-variant">#000000</span>
+</div>
+</div>
+<div class="flex flex-col gap-unit-8">
+<div class="h-32 w-full bg-background rounded-lg border border-outline-variant"></div>
+<div>
+<span class="font-label-caps text-label-caps block">CREAM SURFACE</span>
+<span class="font-body-md text-body-md text-on-surface-variant">#FCF9F5</span>
+</div>
+</div>
+<div class="flex flex-col gap-unit-8">
+<div class="h-32 w-full bg-secondary rounded-lg border border-outline-variant"></div>
+<div>
+<span class="font-label-caps text-label-caps block">BRAND TOBACCO</span>
+<span class="font-body-md text-body-md text-on-surface-variant">#7F5533</span>
+</div>
+</div>
+<div class="flex flex-col gap-unit-8">
+<div class="h-32 w-full bg-surface-container-highest rounded-lg border border-outline-variant"></div>
+<div>
+<span class="font-label-caps text-label-caps block">PEBBLE GREY</span>
+<span class="font-body-md text-body-md text-on-surface-variant">#E5E2DE</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Typography -->
+<div class="reveal delay-100">
+<h3 class="font-headline-sm text-headline-sm mb-stack-md border-b border-outline-variant pb-unit-16">Typography System</h3>
+<div class="space-y-stack-md">
+<div>
+<span class="font-label-caps text-label-caps text-on-tertiary-container block mb-unit-8">Display Heading / Playfair Display</span>
+<h2 class="font-display-lg text-headline-md md:text-display-lg leading-tight">The Modern Standard</h2>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-tertiary-container block mb-unit-8">Body Copy / Inter</span>
+<p class="font-body-lg text-body-lg text-on-surface">Designed for clarity and elegance across all touchpoints, from editorial spreads to digital interfaces.</p>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-tertiary-container block mb-unit-8">Labels &amp; UI / Inter Semibold</span>
+<div class="flex gap-stack-sm">
+<span class="font-cta text-cta">SHOP COLLECTION</span>
+<span class="font-cta text-cta opacity-50">VIEW MORE</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Digital Presence: Website & Ad Creatives -->
+<section class="bg-surface-container-highest py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="reveal text-center mb-stack-lg">
+<h2 class="font-display-lg text-headline-md mb-unit-8">Multichannel Ecosystem</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">A cohesive visual language from web storefronts to social narratives.</p>
+</div>
+<!-- Website Mockups -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center mb-section-gap">
+<div class="lg:col-span-8 reveal">
+<div class="bg-surface rounded-xl overflow-hidden shadow-2xl border border-outline-variant group">
+<div class="bg-surface-container p-unit-8 flex gap-unit-8 border-b border-outline-variant">
+<div class="w-3 h-3 rounded-full bg-error/40"></div>
+<div class="w-3 h-3 rounded-full bg-secondary/40"></div>
+<div class="w-3 h-3 rounded-full bg-primary/40"></div>
+</div>
+<img class="w-full aspect-video object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAchQPn8ZSHo_w7TFb8qT8Q3-X8P1qAbwXy5Bpe0PspSYMjGfnvnhcWulMqEWKGT2yJXDqVvp6OJIKlJzQMxWFQwHj7Y6szYkLFlNWMaK7ikMPn9bQZZeJ5_aMo-krNYJgCLWfYE8b9en4vwHX_I-WK3xCrwtsPwgD8hNvZVQiNB9YfSoBCLcnuS92iOfkAtWSzAhArhthBvpbLXwbnCXImTYZPa56xyRYKweFjNHs-ds7_xjssOOKz9XZdqnCgHzmhKAhMDIWOXnM"/>
+</div>
+<p class="font-label-caps text-label-caps text-center mt-stack-sm opacity-60">DESKTOP EXPERIENCE — HOME</p>
+</div>
+<div class="lg:col-span-4 reveal delay-200">
+<div class="bg-surface rounded-3xl overflow-hidden shadow-2xl border-[8px] border-primary-container max-w-[320px] mx-auto h-[600px]">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2d0E3MFDp2nk8Y_hgIs58i0hhys-qKvYVWYH-wbbxLZHoa5gZTuUOAv_c-pczzmLWnzX7vsrbojnXMesPsjo4aE2A7GaqBh8VXSqnmrydjqgZEBnCC_eDza4_0EHCTP5To8ajHpunNTABbrC-KudfZuboevQLNhgPxfh-XrIAC7FlsbiKB2Vnjuh9ARbjIqpO7CHc7ZMD5AuC_DQlEbN4paM0c3Yc5GFF_wzgWDneQDQEXj-xQniEQXCGrtZwFFq3XI4fAOokmEo"/>
+</div>
+<p class="font-label-caps text-label-caps text-center mt-stack-sm opacity-60">MOBILE PORTAL — COLLECTIONS</p>
+</div>
+</div>
+<!-- Advertising Creatives -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="reveal">
+<div class="aspect-square bg-surface-variant overflow-hidden rounded-lg ambient-shadow relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcnSZaYPPUSh9_fl3NmhVTQZzmlpXLntUushezMSgryu8X_G-8LuC7c8VgD_jFt-vwmg4DXjiGvHy4YTvrItNNKpjRLOGNQBEel0i3NvSZRppztu8HFt-H2-wJkDmMSzWZJYadqN4GirWpRe6Hpa4R8N1ezmdjO1HL4T9L2i-aGWKt6cINMFClSvp1mRIlxBrbFokP8mntG91fJAMMhKeHjotJoPeJXBNbzxmqsBa-clmR2BiF9H_OdX8Ud9Z4UJHKbTV-btLQVhk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex flex-col justify-end p-stack-md">
+<span class="text-white font-label-caps text-label-caps">EDITORIAL SERIES</span>
+<h4 class="text-white font-headline-sm text-headline-sm">London Walk</h4>
+</div>
+</div>
+</div>
+<div class="reveal delay-100">
+<div class="aspect-square bg-surface-variant overflow-hidden rounded-lg ambient-shadow relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA46IWsCU5lY_S-5hgm6u-5C2SCz2OTmSLCu3Rn24bNLKeVQDlErlcg4RouB-nYeHkKn975LkG5Ovi1lqo0rdiAoG9mi7De0i55lxD1mrQ6nl6JAnDX-_ij0XRt97xDXP9QxYxV2f1r08YxmiolUWByhKsOWjCQaOOeYr8plkco_IWbuh1NlV5KNRhwNkDOI3o2dS_5QyuR3ZR5j22VrmFJE8giKMPjdzb6_YQ4nYd08dCvimQGfjJQt62jkWXE3NZfz5hZUQZwVAk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex flex-col justify-end p-stack-md">
+<span class="text-white font-label-caps text-label-caps">CAMPAIGN N°12</span>
+<h4 class="text-white font-headline-sm text-headline-sm">The Artisan Soul</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Component Library -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" id="library">
+<h2 class="font-display-lg text-headline-md mb-stack-lg border-b border-outline-variant pb-unit-16">Design System Assets</h2>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-stack-lg">
+<!-- Interactive Elements -->
+<div class="reveal">
+<h4 class="font-label-caps text-label-caps mb-stack-md text-on-tertiary-container">Buttons &amp; CTAs</h4>
+<div class="space-y-stack-md p-stack-md bg-surface-container rounded-lg">
+<div class="space-y-unit-16">
+<button class="w-full bg-primary text-on-primary font-cta text-cta py-4 transition-all hover:bg-secondary">PRIMARY BUTTON</button>
+<button class="w-full border border-primary text-primary font-cta text-cta py-4 transition-all hover:bg-surface-container-low">SECONDARY GHOST</button>
+<button class="flex items-center justify-center gap-unit-8 w-full font-cta text-cta text-primary py-2 group">
+                                TEXT ACTION <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Navigations & Tabs -->
+<div class="reveal delay-100">
+<h4 class="font-label-caps text-label-caps mb-stack-md text-on-tertiary-container">Navigation Archetypes</h4>
+<div class="space-y-stack-md">
+<!-- Desktop Pill Nav -->
+<div class="bg-surface border border-outline-variant p-stack-sm rounded-full flex justify-between items-center px-stack-md">
+<span class="font-body-md text-body-md font-bold">Home</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Shop</span>
+<span class="font-body-md text-body-md text-on-surface-variant">About</span>
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+</div>
+<!-- Bottom Mobile Bar Mock -->
+<div class="bg-white border border-outline-variant rounded-xl flex justify-around items-center p-4">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="text-[10px] font-bold">Shop</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="text-[10px]">Curated</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="text-[10px]">Cart</span>
+</div>
+</div>
+</div>
+</div>
+<!-- UI Details -->
+<div class="reveal delay-200">
+<h4 class="font-label-caps text-label-caps mb-stack-md text-on-tertiary-container">Status &amp; Badges</h4>
+<div class="space-y-stack-md p-stack-md bg-surface-container rounded-lg">
+<div class="flex flex-wrap gap-unit-8">
+<span class="bg-surface px-3 py-1 rounded-full text-label-caps font-label-caps border border-outline-variant">Handcrafted</span>
+<span class="bg-primary text-white px-3 py-1 rounded-full text-label-caps font-label-caps">Limited Edition</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-caps font-label-caps">New Season</span>
+</div>
+<div class="flex flex-col gap-unit-8">
+<label class="font-label-caps text-label-caps opacity-60">PRODUCT DROPDOWN</label>
+<div class="border-b border-primary py-2 flex justify-between items-center cursor-pointer">
+<span class="font-body-md">Select Size</span>
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA: Footer Identity -->
+<section class="py-section-gap bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-display-lg text-headline-md md:text-display-lg mb-stack-md">Ready to Step Into the New?</h2>
+<button class="bg-surface text-primary font-cta text-cta px-12 py-5 rounded-full hover:bg-secondary-fixed transition-colors">PARTNER WITH WEARNOU</button>
+</div>
+</section>
+</main>
+<footer class="w-full bg-surface-container-highest dark:bg-surface-container-highest">
+<div class="w-full px-margin-desktop py-stack-lg flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md text-primary mb-stack-sm md:mb-0">WearNou</div>
+<div class="flex flex-wrap justify-center gap-stack-md mb-stack-sm md:mb-0">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="#">Shipping</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary" href="#">Returns</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                © 2024 WearNou. Handcrafted Excellence.
+            </div>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for Reveal Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Smooth Scroll handling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>
